@@ -1,0 +1,15 @@
+
+the system is ubuntu16.04  the Linux stable is V1.8.2
+
+1.the first step is installing git****************sudo apt-get install git
+2.the second step is clone firmware**************git clone https://   github.com/PX4/Firmware.git
+
+3.sudo usermod -a -G dialout $USER
+
+  then restart the system
+
+4. then copy ubuntu_sim_nuttx.sh to a Empty document 
+   and  excult command " chmod 777 ubuntu_sim_nuttx.sh "
+5 run the script in a bash shell:  " source ubuntu_sim_nuttx.sh"
+
+6 restart the computer on completion

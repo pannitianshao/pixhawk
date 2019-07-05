@@ -1,0 +1,9 @@
+cd ~/src/Firmware
+mkdir ../Firmware-build
+cd ../Firmware-build
+cmake ../Firmware -G "CodeBlocks - Unix Makefiles" -DCONFIG=nuttx_px4fmu-v2_default
+
+检查 build 路径   
+点击Add可以增加Executable行（若不存在此行） 
+make
+upload

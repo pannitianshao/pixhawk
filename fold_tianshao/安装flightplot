@@ -1,0 +1,55 @@
+
+1.安装jdk  sudo apt-get install openjdk-7-jdk 
+
+如果运行失败  则输入以下指令
+sudo add-apt-repository ppa:openjdk-r/ppa 
+sudo apt-get update 
+sudo apt-get install openjdk-7-jdk 
+
+安装ant
+sudo apt-get install ant
+下载FlightPlot：
+
+git clone --recursive https://github.com/PX4/FlightPlot.git
+
+编译:
+
+    cd FlightPlot
+    ant
+
+为了给Ubuntu系统使用，创建deb文件：
+
+    cd FlightPlot
+    ant gen_deb
+    sudo dpkg -i out/production/FlightPlot.deb
+
+运行：
+
+java -jar out/production/flightplot.jar
+
+编译时出现错误：
+
+Unable to locate tools.jar. Expected to find it in /usr/lib/jvm/java-6-openjdk-amd64/lib/tools.jar
+Buildfile: /home/amov/FlightPlot/build.xml
+
+make_dirs:
+
+compile:
+
+BUILD FAILED
+/home/amov/FlightPlot/build.xml:24: Unable to find a javac compiler;
+com.sun.tools.javac.Main is not on the classpath.
+Perhaps JAVA_HOME does not point to the JDK.
+It is currently set to "/usr/lib/jvm/java-6-openjdk-amd64/jre"
+
+Total time: 0 seconds
+解决方法：
+
+安装jdk版本有问题，重新安装:
+
+sudo apt-get install openjdk-7-jdk
+--------------------- 
+作者：spurmoon 
+来源：CSDN 
+原文：https://blog.csdn.net/spurmoon/article/details/85305517 
+版权声明：本文为博主原创文章，转载请附上博文链接！
